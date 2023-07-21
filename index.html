@@ -1,16 +1,37 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <title>Space</title>
   </head>
   <body>
 
-    Space
-    
+    <main>
+      <nav id="writer">
+        <h1>space</h1>
+        <ul>
+          <a href="https://dualhacks.devpost.com/project-gallery" target="_blank">About</a>
+          <a href="/learn/app.html">Learn</a>
+          <a href="http://github.com/VeenitXSheth/space" target="_blank">GitHub</a>
+        </ul>
+        <div class="buttons">
+          <button onclick="location.href='/auth/join.html'">TRY FREE</button>
+          <button class="material-symbols-outlined" id="toggle">dark_mode</button>
+        </div>
+      </nav>
+      <section id="hero">
+        <h1>Blast off into knowledge.</h1>
+        <p>Free, interactive resources to inspire the next astronaut.</p>
+        <div class="buttons">
+          <button onclick="location.href='/auth/join.html'">START NOW</button>
+          <button onclick="location.href='/auth/login.html'" id="login">LOGIN</button>
+        </div>
+      </section>
+    </main>
     <script type="module" src="/main.js"></script>
 
   </body>

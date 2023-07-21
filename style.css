@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Tektur:wght@400;700&display=swap");
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  background: var(--background);
+  transition: 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  --accent: rgba(17, 104, 245, 1);
+  --accent-light: rgba(17, 104, 245, 0.25);
+  --background: white;
+  --text: black;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+
+main nav {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  height: fit-content;
+  padding: 32px 0px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background: var(--background);
+  transition: 0.3s ease;
+}
+
+main nav h1 {
+  color: var(--text);
+}
+
+main nav ul a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 14px;
+  margin: 0px 12px 0px;
+  transition: 0.3s ease;
+}
+
+main nav ul a:hover {
+  color: var(--accent);
+}
+
+main nav .buttons {
+  display: flex;
+  align-items: center;
+}
+
+main nav .buttons button {
+  background: var(--accent);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  outline: 1px solid transparent;
+  cursor: pointer;
+  border-radius: 32px;
+  font-weight: 600;
+  margin-right: 8px;
+  /* font-size: 12px; */
+  transition: 0.3s ease;
+}
+
+main nav .buttons button:hover {
+  filter: brightness(1.2);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+main nav .buttons .material-symbols-outlined {
+  padding: 12px 12px 12px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+main section {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main section h1 {
+  font-size: 72px;
+  margin-bottom: 4px;
+  color: var(--text);
+  transition: 0.3s ease;
+}
+
+main section p {
+  font-size: 18px;
+  margin-bottom: 32px;
+  color: var(--text);
+  transition: 0.3s ease;
+}
+
+main section .buttons {
+  display: flex;
+  align-items: center;
+}
+
+main section .buttons button {
+  margin-left: 4px;
+  margin-right: 4px;
+  background: var(--accent);
+  color: white;
+  padding: 16px 25px;
+  border: 1px solid var(--accent);
+  outline: 1px solid transparent;
+  cursor: pointer;
+  border-radius: 32px;
+  font-weight: 600;
+  margin-right: 8px;
+  font-size: 12px;
+  transition: 0.3s ease;
+}
+
+main section .buttons button:hover {
+  filter: brightness(1.2);
+}
+
+main section .buttons #login {
+  background: transparent;
+  color: var(--text);
+  padding: 14px 25px;
+  border: 2px solid var(--accent);
+}
+
+main section .buttons #login:hover {
+  background: var(--accent);
+  color: white;
+}

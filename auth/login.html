@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="auth.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <title>Login to Space</title>
+</head>
+<body>
+
+    <main>
+        <form>
+            <h1>Login to space.</h1>
+            <label for="username">Username</label>
+            <input type="text" name="username" placeholder="Username">
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="Email">
+            <label for="password">Password</label>
+            <input type="password" name="password" placeholder="Password">
+            <button type="submit">Login</button>
+            <a href="./join.html">Don't have an account? Join</a>
+            <span>or</span>
+            <button id="google-btn">
+                <img src="/search.png" alt="Login with Google">
+                Login with Google
+            </button>
+        </form>
+        <p id="alert">This is an alert message</p>
+    </main>
+
+    <script type="module" src="./login.js"></script>
+    
+</body>
+</html>

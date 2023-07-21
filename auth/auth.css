@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Tektur:wght@400;700&display=swap");
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  background: var(--background);
+  transition: 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  --accent: rgba(17, 104, 245, 1);
+  --accent-light: rgba(17, 104, 245, 0.25);
+  --background: white;
+  --text: black;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  background: var(--accent);
+}
+
+main form {
+  height: 75vh;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  background: var(--background);
+  /* border: 1px solid green; */
+}
+
+main form h1 {
+  margin-top: 48px;
+  margin-left: 48px;
+  margin-bottom: 60px;
+  font-size: 36px;
+}
+
+main form label {
+  margin-left: 48px;
+  margin-bottom: 6px;
+}
+
+main form input {
+  margin-left: 48px;
+  margin-bottom: 24px;
+  padding: 16px 16px 16px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  margin-right: 48px;
+  transition: 0.3s ease;
+  outline: none;
+}
+
+main form input:hover {
+  border: 1px solid var(--accent);
+}
+
+main form input:focus {
+  border: 1px solid var(--accent);
+}
+
+main form span {
+  display: block;
+  margin: auto;
+  margin-top: 36px;
+  margin-bottom: 36px;
+}
+
+main form button {
+  margin-left: 48px;
+  margin-right: 48px;
+  padding: 16px 12px 16px;
+  border-radius: 4px;
+  background: var(--accent);
+  color: white;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+main form button:hover {
+  filter: brightness(1.2);
+}
+
+main form a {
+  margin-left: 48px;
+  font-size: 12px;
+  margin-top: 6px;
+  text-decoration: none;
+  color: black;
+}
+
+main form a:hover {
+  text-decoration: underline;
+}
+
+main form #google-btn {
+  display: flex;
+  align-items: center;
+  background: #f5f5f5;
+  color: var(--text);
+  justify-content: center;
+  font-weight: 400;
+}
+
+main form #google-btn:hover {
+  filter: brightness(1);
+  border: 1px solid var(--accent);
+}
+
+main form #google-btn img {
+  height: 24px;
+  width: 24px;
+  margin-right: 12px;
+}
+
+main #alert {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 36px;
+  margin-right: 36px;
+  background: #fc9c95;
+  color: red;
+  border: 1px solid red;
+  padding: 16px;
+  border-radius: 4px;
+  display: none;
+}
