@@ -10,6 +10,7 @@ export default defineConfig({
         login: resolve(__dirname, 'auth/login.html'),
         join: resolve(__dirname, 'auth/join.html'),
         app: resolve(__dirname, 'learn/app.html'),
+        configure: resolve(__dirname, 'learn/create/configure.html'),
       },
     },
   },

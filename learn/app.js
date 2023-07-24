@@ -1,6 +1,6 @@
 import { app as firebase } from '../firebase-config.js';
 import { getAuth, signOut, onAuthStateChanged, updateProfile } from 'firebase/auth';
-import { getFirestore } from 'firebase/firestore';
+import { getFirestore, doc, setDoc, collection, getDocs, onSnapshot, updateDoc, arrayUnion } from 'firebase/firestore';
 
 console.log(firebase)
 
@@ -48,4 +48,62 @@ onAuthStateChanged(auth, user => {
         location.href = '/auth/login.html';
     }
      
+})
+
+const joinQuizForm = document.getElementById('join-quiz-form');
+const makeQuizForm = document.getElementById('make-quiz-form');
+const switchFormBtn = document.getElementById('switch-form');
+const switchText = document.getElementById("switch-text")
+
+makeQuizForm.style.display = 'none';
+
+switchFormBtn.addEventListener('click', () => {
+
+    if (makeQuizForm.style.display === 'none') {  
+        makeQuizForm.style.display = 'flex';
+        joinQuizForm.style.display = 'none';
+        switchText.innerText = "Switch to join a quiz"
+    } else {
+        makeQuizForm.style.display = 'none';
+        joinQuizForm.style.display = 'flex';
+        switchText.innerText = "Switch to make a quiz"
+    }
+
+})
+
+joinQuizForm.addEventListener('submit', (e) => {
+
+    e.preventDefault()
+
+    console.log(joinQuizForm.code.value)
+
+})
+
+makeQuizForm.addEventListener('submit', async e => {
+
+    e.preventDefault()
+
+    const name = makeQuizForm.quizname.value;
+    const admin = currentUserUID;
+    const players = [];
+    const inviteCode = Math.random().toString(36).slice(2, 7);
+    const questions = [];
+
+    const colRef = collection(db, 'quizzes')
+    const docRef = doc(colRef)
+
+    await setDoc(doc(db, 'quizzes', inviteCode), {
+        admin: admin,
+        inviteCode: inviteCode,
+        name: name,
+        players: players,
+        questions: questions,
+    })
+
+    console.log('quiz created!')
+
+    sessionStorage.setItem('inviteCode', inviteCode)
+
+    location.href = '/learn/create/configure.html'
+
 })

@@ -5,15 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="app.css" type="text/css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <title>Space</title>
+    <title>space</title>
 </head>
 <body>
 
-    App Page
+    <main>
+        <nav>
+            <h1>space</h1>
+            <button id="account-btn">
+                <img src="/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg" alt="User account icon">
+            </button>
+            <dialog>
+                <button id="sign-out">Sign Out</button>
+                <button id="settings">Settings</button>
+                <button id="leaderboard">Leaderboards</button>
+            </dialog>
+        </nav>
+        <section>
+            <div>
+                <form id="join-quiz-form">
+                    <h1>Join a quiz</h1>
+                    <p>Enter an invite code to join a quiz</p>
+                    <input type="text" placeholder="Invite code" name="code">
+                    <button type="submit">Join</button>
+                </form>
+                <form id="make-quiz-form">
+                    <h1>Make a quiz</h1>
+                    <p>Enter a name to make a quiz</p>
+                    <input type="text" placeholder="Quiz name" name="quizname">
+                    <button type="submit">Create</button>
+                </form>
+                <p id="switch-text">Switch to make a quiz</p>
+                <label class="switch">
+                    <input id="switch-form" type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </section>
+    </main>
 
     <h1 id="displayName"></h1>
-
-    <button id="sign-out">sign out</button>
 
     <script type="module" src="./app.js"></script>
     

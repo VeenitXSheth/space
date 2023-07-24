@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Tektur:wght@400;700&display=swap");
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  background: var(--background);
+  transition: 0.3s ease;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+:hover {
+  cursor: default;
+}
+
+:root {
+  --accent: rgba(17, 104, 245, 1);
+  --accent-light: rgba(17, 104, 245, 0.25);
+  --background: white;
+  --text: black;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
